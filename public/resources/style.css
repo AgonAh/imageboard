@@ -1,0 +1,415 @@
+*{
+	background-color: #333;
+}
+body{
+	margin: 0;
+}
+ img{
+	background-color: rgba(0,0,0,0);
+}
+/*Index page*/
+#boardBox{
+	width: 40%;
+	/*height: 40vh;*/
+	border:5px solid coral;
+	margin: auto;
+	/*display: flex;*/
+}
+#boardBox a{
+	color:coral;
+	text-decoration: none;
+}
+.boardList li{
+	list-style: none;
+	padding-bottom: 10px;
+	display: block;
+    text-align: center;
+}
+.boardList{
+	/*padding: 15px;*/
+	font-size: 7rem;
+}
+.boardList ul{
+    padding-left: 0;
+}
+/*Index page end*/
+
+.header{
+	display: flex;
+	color: coral;
+}
+.header h1{
+	font-size: 5em;
+	margin: 0 auto;
+
+}
+.header .logo{
+	position: absolute;
+	left: 15px;
+	width: 100px;
+	height: 100px;
+
+}
+.header .profileLogo{
+	position: absolute;
+	right: 15px;
+		width: 100px;
+		height: 100px;
+}
+.postHeader{
+	border-color: coral;
+}
+.boardCont{
+	position: fixed;
+	left: 0;
+	top: 15%;
+	margin: 0;
+	padding: 0;
+	width:5px;
+	height: 100vh;
+	display: inline-flex;
+}
+.boards{
+	display: inline-flex;
+	position: absolute;
+	left:-100px;
+	flex-direction: column;
+	border-right: 2px solid coral;
+	transition: 200ms;
+
+
+}
+.boardCont:hover .boards{
+	left:0px;
+}
+.boards h4{
+	padding: 0;
+	margin: 10px;
+	color: coral;
+	text-decoration: none;
+}
+.boards a{
+	text-decoration: none;
+}
+.container{
+	display: inline-flex;
+	flex-wrap: wrap;
+	position: absolute;
+	margin: 0;
+	left:15%;
+	width: 70%;
+	color:#fca;
+}
+.rules{
+	padding-bottom: 5px;
+	border-bottom: 2px coral solid;
+	text-align: center;
+}
+
+.rules strong{
+	font-size: 5em;
+	color: #f50;
+}
+.post img{
+	float: left;
+	padding-right: 25px;
+}
+.post .postImg{
+	max-width: 403px;
+	max-height: 300px;
+}
+.postContainer{
+	min-height: 320px;
+}
+section{
+	display: inline;
+}
+.viewMore{
+	color: darkgrey;
+}
+.viewMore a{
+	color: lightgreen;
+	text-decoration: none;
+}
+.space{
+	height: 15px;
+}
+.title{
+	color: violet;
+}
+.details{
+	color: coral;
+}
+.reply,.replyText, .reply .space, .reply .details{
+	background-color: #444;
+}
+.reply, .post{
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+.reply img{
+	width: 180px;
+	float:left;
+	margin-right: 15px;
+
+}
+.reply{
+	background-color: #444;
+	/*width: 100%;*/
+}
+.reply{
+	display: inline-block;
+	padding: 5px;
+}
+.active h4{
+	color: lightgreen;
+}
+.postContainer{
+	border-bottom: 2px solid #555;
+	padding: 15px;
+	width: 100%;
+}
+.profileList {
+	display: inline-flex;
+	list-style: none;
+	font-size: 1.5em;
+	overflow: hidden;
+
+}
+/*.profileLogo{
+	background-color:#333;
+}*/
+.profileList ul{
+	position: absolute;
+/*	top: 77px;
+	right: -100px;*/
+	top: -200px;
+	right: 15px;
+	transition-duration: 400ms;
+	/*background-color: rgba(0,0,0,0);*/
+}
+.profileList a, .profileList ul{
+	color:white;
+	text-decoration: none;
+	list-style: none;
+	background-color: rgba(0,0,0,0);
+
+}
+.profileList:hover ul{
+	top: 77px;
+	right:15px;
+	z-index:2;
+}
+
+
+/*Messager system*/
+#msgBody{
+	position: absolute;
+	top: 10%;
+	overflow-y: scroll;
+	height: 80%;
+	width: 100%;
+}
+.friend{
+	border-bottom: 1px solid #666;
+	width: 100%;
+}
+.friend img{
+	width: 40px;
+	height: 40px;
+	border-radius: 90px;
+}
+.msgTabs{
+	width:100%;
+}
+.sMsg{
+	float: right;
+	width: 80%;
+	color: lightgrey;
+	background-color: olive;
+	border-radius: 10px;
+	padding: 5px;
+	margin-bottom: 5px;
+}
+.rMsg{
+	float: left;
+	width: 80%;
+	color: lightgrey;
+	background-color: #bc5923;
+	border-radius: 10px;
+	padding: 5px;
+	margin-bottom: 5px;
+}
+
+.messager{
+	display: inline-flex;
+    color: navajowhite;
+	/*justify-content: flex-start;*/
+	position: fixed;
+	right: -300px;
+	top:300px;
+	display: inline-flex;
+	width: 290px;
+	height: 550px;
+	border:2px coral solid;
+	z-index: 3;
+	transition-duration: 400ms;
+	flex-wrap: wrap;
+}
+.messager img{
+	z-index:2;
+}
+.msgIcon{
+	position: inherit;
+	top:250px;
+	right: 0px;
+	width: 64px;
+	height: 64px;
+	z-index:2;
+	color: #fca;
+}
+.messager:hover, .messager:focus{
+	position: fixed;
+	top:300px;
+	right: 0px;
+
+}
+.tabs{
+	display: inline-flex;
+	max-height: 20px;
+	width: 290px;
+	flex-wrap: wrap;
+}
+.messager select{
+	position: inherit;
+	width: 200px;
+	top: 22px;
+}
+
+.friendsTab, .incognitoTab, .roomsTab{
+	min-width: 95px;
+	/*min-width    : 50px;*/
+	height: 20px;
+	border-bottom: 2px solid coral;
+	border-right: 2px solid coral;
+}
+.roomsTab{
+	border-right: none;
+}
+.messagerCBox{
+	min-width: 250px;
+    color: navajowhite;
+}
+.groupsBox{
+    position: absolute;
+    top: 30px;
+	max-height: 20px;
+	align-self: flex-start;
+}
+.createPost textarea{
+	width:100%;
+	height: 80px;
+	resize: none;
+}
+.botNav a{
+	color: white;
+	text-decoration: none;
+	font-size: 1.5rem;
+	padding-left: 5px;
+}
+.botNav{
+	position: fixed;
+	bottom: 5px;
+	right: 5px;
+}
+/*Pristine start*/
+.form-group .form-control {
+    width: 95%;
+    outline: none;
+    padding: 5px;
+    border: none;
+    background: #d1d1d1;
+    border-bottom: 2px solid #1c94ff;
+    font-size: 16px;
+}
+
+.has-success .form-control {
+    border-bottom: 2px solid #168b3f;
+}
+
+.has-danger .form-control {
+    border-bottom: 2px solid #dc1d34;
+}
+
+.form-group .text-help {
+    color: #dc1d34;
+}
+
+.inline-label label{
+    display: inline;
+}
+
+.pristine-error {
+    display: table;
+}
+/*Pristine end*/
+/*Contact page start*/
+.form-container{
+
+	padding-top: 20px;
+	width: 50%;
+	margin:auto;
+}
+.form-container textarea{
+	height: 6em;
+}
+/*Contact page end*/
+#abtUsText{
+	width: 60%;
+	font-size: 2rem;
+	color: white;
+	margin: auto;
+	margin-top: 5%;
+	text-align: center;
+}
+.profileInfo{
+	width: 50%;
+}
+#profilePicForm{
+	margin-top: 5%;
+}
+/*Signup page start*/
+.signUp{
+		margin-left: 45%;
+}
+.login_signup{
+	margin-left: 47.9%;
+	margin-top: 30px;
+}
+#submitBtn{
+	margin-left:5%;
+}
+/*Signup page end*/
+
+/*Specific post start*/
+.inPostContainer{
+	margin: 40px 20px 0;
+}
+
+.sendMsg{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+#sendMsg{
+	width: 78%;
+}
+#sendBox{
+	display: contents;
+}
+.profileInfo{
+	position: relative;
+	left: 43%;
+}
+
+
